@@ -1,0 +1,111 @@
+/*Overall CSS*/
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*Nav bar*/
+
+header ul{
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    overflow: hidden;
+    background-color: #252525;
+    border: 3px solid #252525;
+}
+header li{
+    float: left;
+}
+header li a{
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    padding: 2vh 2vh;
+    margin: auto;
+    text-decoration: none;
+}
+header li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: antiquewhite;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+header li a:hover::after{
+    background-color: #ffffff;
+    width: 100%;
+}
+header h1{
+    text-align: center;
+    font-size: 25px;
+    align-items: baseline;
+    color:#ffffff;
+    padding: 2vh 2vh;
+}
+
+body{
+    background-color: #333;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+}
+/*Main*/
+main{
+    margin: 1vh;
+    margin-left: 30vh;
+    margin-right: 30vh;
+}
+main h2{
+    text-align: center;
+    font-size: 25px;
+    margin: 1vh;
+    color: #ffffff;
+}
+@media screen and (max-width: 1500px) {
+    main{
+        margin: 0;
+    }
+    
+}
+/*Section*/
+.container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    position: relative;
+    background-color: #252525;
+    border-radius: 25px;
+    border-style: groove;
+    border: 3px solid #25252577;
+    color: #ffffff;
+    margin: 1vh;
+}
+.column{
+    width: 50%;
+    padding: 20px;
+
+}
+.container p{
+    padding: 2%;
+}
+
+/*Footer*/
+footer{
+    display: block;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    background-color: #252525;
+    color: #ffffff;
+}
