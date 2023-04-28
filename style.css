@@ -51,54 +51,82 @@ header h1{
 }
 
 body{
-    background-color: #333;
-    display: flex;
+    background-color: #631616;
+    background-image: linear-gradient(
+        -45deg,
+        transparent 75%,
+        hsl(0, 0%, 98%) 0%),
+        linear-gradient(
+        45deg,
+        transparent 75%,
+        hsl(0, 57%, 32%) 0%),
+        linear-gradient(
+        -135deg,
+        transparent 75%,
+        hsl(320, 3%, 18%) 0%),
+        linear-gradient(
+        135deg,
+        transparent 75%,
+        hsl(0, 81%, 36%) 0%);
+    background-size: 4rem 4rem, 2rem 2rem;
+    display: grid;
     position: relative;
     flex-direction: column;
 }
 /*Main*/
 main{
     min-height: 100vh;
+    justify-content: center;
+    margin-bottom: 2vh;
 }
 main h2{
     text-align: center;
-    font-size: 25px;
-    margin: 1vh;
+    font-size: 45px;
+    font-weight: bold;
+    margin: 1vh 0vh;
     color: #ffffff;
+    background-color: #252525;
+}
+main h4{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 1vh 0vh;
+    color: #ffffff;
+    background-color: #252525;
 }
 
 /*Section*/
 .container{
-    display: flex;
+    display: grid;
     text-align: center;
     justify-content: center;
     align-self: center;
-    position: relative;
     background-color: #252525;
     border-radius: 25px;
-    border-style: groove;
     border: 3px solid #25252577;
     color: #ffffff;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-bottom: 1vh;
     margin-top: 1vh;
 }
 .column{
-    width: 50%;
-    padding: 20px;
-
+    padding: 1vh;
 }
 .container p{
     padding: 2%;
 }
-
+div{
+    display: block;
+}
 /*Footer*/
 footer{
     display: block;
     text-align: center;
     margin-top: auto;
     position: absolute;
+    font-size: 20px;
     width: 100%;
     bottom: 0;
     left: 0;
@@ -117,6 +145,7 @@ button{
     border: none;
     border-radius: 25px;
     padding: 15px 32px;
+    margin-bottom: 1vh;
     outline: 2px solid #252525;
     font-size: 16px;
     background-color: #333;
@@ -124,6 +153,9 @@ button{
     text-align: center;
     text-decoration: none;
     transition: 0.5s;
+}
+button:hover{
+    background-color: brown;
 }
 button:after{
     content: '';
@@ -137,4 +169,16 @@ button:after{
 button:hover::after{
     background-color: #ffffff;
     width: 100%;
+}
+/*Input*/
+input{
+    color: #252525;
+    font-size: large;
+    font-weight: bold;
+}
+/*Media*/
+@media only screen and (max-width: 600px){
+    .container{
+        margin: 1vh;
+    }
 }

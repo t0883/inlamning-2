@@ -26,6 +26,11 @@ app.get("/login", (req, res) => {
     res.sendFile("login.html", {root: __dirname});
 });
 
+//Skapa en Get metod som returnerar signup.html
+app.get("/signup", (req, res) => {
+    res.sendFile("signup.html", {root: __dirname});
+});
+
 //Skapa en Get metod som redirectar /about tillbaka till index.html eller "/"
 app.get("/about", (req, res) => {
     res.redirect("/");
