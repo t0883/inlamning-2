@@ -15,6 +15,5 @@ let jsObject = {
 let jsonObject = JSON.stringify(jsObject);
 
 function collectInput(){
-    console.log(jsObject);
-    console.log(jsonObject);
+    window.location.href = "/confirm"
 }

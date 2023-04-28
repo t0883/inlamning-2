@@ -2,9 +2,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const fs = require("fs");
+const { log } = require("console");
 const app = new express();
 const portNr = 8081;
-const jsonFilePath = "./data.json"
+const jsonFilePath = "./data/data.json";
+const jsonLoginPath = "./data/login.json";
 
 
 app.use(bodyParser.json());
@@ -35,17 +37,18 @@ app.get("/login", (req, res) => {
 app.get("/signup", (req, res) => {
     res.sendFile("signup.html", {root: __dirname});
 });
+
 //Skapa en Get metod som returnerar about.html
 app.get("/about", (req, res) => {
     res.sendFile("about.html", {root: __dirname});
 });
 
-/*
+
 //Skapa en Get metod som redirectar /about tillbaka till index.html eller "/"
-app.get("/about", (req, res) => {
+app.get("/confirm", (req, res) => {
     res.redirect("/");
 });
-*/
+
 
 //Skapa en metod som returnera body-data som en JSON string
 app.post("/signup", (req, res) => {
@@ -53,13 +56,35 @@ app.post("/signup", (req, res) => {
 
     let jsonData = JSON.stringify(data, null, 2);
 
-    console.log(jsonData);
-
     //Skriva JSON string till fil
     fs.writeFile(jsonFilePath, jsonData, (err) => {
         //Om error, skriv ut error
         if(err) console.log(err);
     });
 
-    res.send("Data Received: " + jsonData);
+    res.sendFile("confirm.html", {root: __dirname});
+});
+
+//Login 
+app.post("/login", (req, res) => {
+    let loginUsername = req.body.username;
+    let loginPassword = req.body.password;
+
+    console.log(loginUsername, loginPassword);
+
+    fs.readFile(jsonFilePath, (err, data) => {
+        if(err){
+            console.log(err);
+            return;
+        }
+        let jsonData = JSON.parse(data);
+        console.log(jsonData.username);
+
+        if(loginUsername == jsonData.username && loginPassword == jsonData.password){
+            console.log("Inloggad");
+            res.sendFile("confirm.html", {root: __dirname});
+        }
+    })
+
+    //res.send(`Username: ${username} Password: ${password}`);
 });
