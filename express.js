@@ -21,6 +21,11 @@ app.get("/", (req, res) => {
     res.sendFile("index.html", {root: __dirname});
 });
 
+//Skapa en Get metod som returnerar index.html
+app.get("/index", (req, res) => {
+    res.sendFile("index.html", {root: __dirname});
+});
+
 //Skapa en Get metod som returnerar login.html
 app.get("/login", (req, res) => {
     res.sendFile("login.html", {root: __dirname});
@@ -30,18 +35,21 @@ app.get("/login", (req, res) => {
 app.get("/signup", (req, res) => {
     res.sendFile("signup.html", {root: __dirname});
 });
+//Skapa en Get metod som returnerar about.html
+app.get("/about", (req, res) => {
+    res.sendFile("about.html", {root: __dirname});
+});
 
+/*
 //Skapa en Get metod som redirectar /about tillbaka till index.html eller "/"
 app.get("/about", (req, res) => {
     res.redirect("/");
 });
+*/
 
 //Skapa en metod som returnera body-data som en JSON string
-app.post("/", (req, res) => {
+app.post("/signup", (req, res) => {
     let data = req.body;
-
-    //Konverterar age till en int
-    data.age = parseInt(data.age);
 
     let jsonData = JSON.stringify(data, null, 2);
 
