@@ -52,6 +52,11 @@ app.get("/confirm", (req, res) => {
 
 //Skapa en metod som returnera body-data som en JSON string
 app.post("/signup", (req, res) => {
+    let password = req.body.password;
+    let confirmPassword = req.body.confirmPassword;
+    if(password != confirmPassword){
+        return;
+    }
     let data = req.body;
 
     let jsonData = JSON.stringify(data, null, 2);
@@ -82,7 +87,7 @@ app.post("/login", (req, res) => {
 
         if(loginUsername == jsonData.username && loginPassword == jsonData.password){
             console.log("Inloggad");
-            res.sendFile("confirm.html", {root: __dirname});
+            res.sendFile("signedIn.html", {root: __dirname});
         }
     })
 
