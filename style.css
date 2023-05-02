@@ -168,6 +168,22 @@ input{
     font-size: large;
     font-weight: bold;
 }
+/*Tabel*/
+table, th, td{
+    border: 1px solid #ffffff;
+    background-color: #252525;
+    color: #ffffff;
+    margin: 1vh 1vh 1vh 1vh;
+}
+table{
+    width: 50%;
+}
+th{
+    width: 25%;
+}
+
+
+
 /*Media*/
 @media only screen and (max-width: 600px){
     .container{
