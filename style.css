@@ -81,7 +81,6 @@ main h4{
     align-items: center;
     justify-content: center;
     text-align: center;
-    flex-wrap: wrap;
     color: #ffffff;
     border-radius: 25px;
 }
@@ -89,6 +88,10 @@ main h4{
     background-color: #252525;
     padding: 1vh;
     border-radius: 25px;
+    display: flex;
+    word-break: break-all;
+    flex-wrap: wrap;
+    margin: 1vh;
 }
 .container p{
     padding: 2%;
@@ -100,6 +103,20 @@ div{
 /*Form*/
 form{
     margin: 1vh;
+}
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    color: #ffffff;
+    border-radius: 25px;
+}
+.form-column{
+    background-color: #252525;
+    padding: 1vh;
+    border-radius: 25px;
 }
 
 /*Footer*/
