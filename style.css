@@ -101,15 +101,11 @@ div{
 }
 
 /*Form*/
-form{
-    margin: 1vh;
-}
 .form-container{
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    flex-wrap: wrap;
     color: #ffffff;
     border-radius: 25px;
 }
@@ -117,6 +113,7 @@ form{
     background-color: #252525;
     padding: 1vh;
     border-radius: 25px;
+    margin: 1vh;
 }
 
 /*Footer*/
