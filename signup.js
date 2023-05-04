@@ -40,7 +40,5 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             body: JSON.stringify(data),
           });
-
-          userFrom.reset();
     })
 })
