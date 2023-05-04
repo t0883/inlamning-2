@@ -52,9 +52,6 @@ app.get("/registeredUsers", (req, res) => {
 
 //Skapa en metod som returnera body-data som en JSON string
 app.post("/signup", (req, res) => {
-    if(password != confirmPassword){
-        return;
-    }
     
     const jsonData = JSON.stringify(req.body, null, 2);
     

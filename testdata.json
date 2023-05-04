@@ -1,42 +1,10 @@
 [
   {
-    "Firstname": "Tobias",
-    "Lastname": "Andersson",
-    "Email": "tobiiasa@hotmail.com",
+    "Firstname": "123",
+    "Lastname": "123",
+    "Email": "123",
     "Username": "123",
     "Password": "123",
-    "ConfirmPassword": "123"
-  },
-  {
-    "Firstname": "Tobias",
-    "Lastname": "Andersson",
-    "Email": "tobiiasa@hotmail.com",
-    "Username": "123",
-    "Password": "123",
-    "ConfirmPassword": "123"
-  },
-  {
-    "Firstname": "Tobias",
-    "Lastname": "Andersson",
-    "Email": "tobiiasa@hotmail.com",
-    "Username": "123",
-    "Password": "123",
-    "ConfirmPassword": "123"
-  },
-  {
-    "Firstname": "Tobias",
-    "Lastname": "Andersson",
-    "Email": "tobiiasa@hotmail.com",
-    "Username": "123",
-    "Password": "123",
-    "ConfirmPassword": "123"
-  },
-  {
-    "Firstname": "Tobias",
-    "Lastname": "Andersson",
-    "Email": "tobiiasa@hotmail.com",
-    "Username": "123",
-    "Password": "321",
     "ConfirmPassword": "123"
   }
 ]
