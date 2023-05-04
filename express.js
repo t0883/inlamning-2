@@ -5,6 +5,7 @@ const fs = require("fs");
 const { log } = require("console");
 const app = new express();
 const portNr = 8081;
+const path = require("path");
 const jsonFilePath = "./data/data.json";
 const jsonLoginPath = "./data/login.json";
 
@@ -43,31 +44,27 @@ app.get("/about", (req, res) => {
     res.sendFile("about.html", {root: __dirname});
 });
 
-
-//Skapa en Get metod som redirectar /about tillbaka till index.html eller "/"
-app.get("/confirm", (req, res) => {
-    res.redirect("/");
+//Skapa en Get metod som returnerar about.html
+app.get("/registeredUsers", (req, res) => {
+    res.sendFile("registeredUsers.html", {root: __dirname});
 });
 
 
 //Skapa en metod som returnera body-data som en JSON string
 app.post("/signup", (req, res) => {
-    let password = req.body.password;
-    let confirmPassword = req.body.confirmPassword;
     if(password != confirmPassword){
         return;
     }
-    let data = req.body;
-
-    let jsonData = JSON.stringify(data, null, 2);
-
+    
+    const jsonData = JSON.stringify(req.body, null, 2);
+    
     //Skriva JSON string till fil
-    fs.writeFile(jsonFilePath, jsonData, (err) => {
+    fs.writeFileSync("testdata.json", jsonData, (err) => {
         //Om error, skriv ut error
-        if(err) console.log(err);
+        if(err){
+            console.log(err);
+        }
     });
-
-    res.sendFile("confirm.html", {root: __dirname});
 });
 
 //Login 
