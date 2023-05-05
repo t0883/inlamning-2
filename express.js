@@ -71,7 +71,7 @@ app.post("/login", (req, res) => {
 
     console.log(loginUsername, loginPassword);
 
-    fs.readFile(jsonFilePath, (err, data) => {
+    fs.readFile("testdata.json", (err, data) => {
         if(err){
             console.log(err);
             return;
@@ -81,7 +81,7 @@ app.post("/login", (req, res) => {
 
         if(loginUsername == jsonData.username && loginPassword == jsonData.password){
             console.log("Inloggad");
-            res.sendFile("signedIn.html", {root: __dirname});
+            res.sendFile("index.html", {root: __dirname});
         }
     })
 
