@@ -94,5 +94,45 @@
     "Username": "Bengt",
     "Password": "gfdsa",
     "ConfirmPassword": "gdfsa"
+  },
+  {
+    "Firstname": "Haj",
+    "Lastname": "PÅ",
+    "Email": "DAJ",
+    "Username": "HEj",
+    "Password": "då",
+    "ConfirmPassword": "då"
+  },
+  {
+    "Firstname": "Haj",
+    "Lastname": "PÅ",
+    "Email": "DAJ",
+    "Username": "HEj",
+    "Password": "då",
+    "ConfirmPassword": "då"
+  },
+  {
+    "Firstname": "Tobias",
+    "Lastname": "*********",
+    "Email": "tobiiasa@hotmail.com",
+    "Username": "123",
+    "Password": "123",
+    "ConfirmPassword": "123"
+  },
+  {
+    "Firstname": "Tobias",
+    "Lastname": "Andersson",
+    "Email": "tobiiasa@hotmail.com",
+    "Username": "dsgsdfg",
+    "Password": "dfgdfgdfg",
+    "ConfirmPassword": "dfgdfgerwfsdf"
+  },
+  {
+    "Firstname": "123153bhtrdtfgh",
+    "Lastname": "rthrdhrdehrt",
+    "Email": "hrdbhrdthjntrnrthnrt",
+    "Username": "hrthrtdrn qw DASDSGS",
+    "Password": "WQGSDHNDF FSEASD",
+    "ConfirmPassword": "EQWTDSGFRDHNDFFA DAW DQE"
   }
 ]
